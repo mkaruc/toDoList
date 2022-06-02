@@ -25,7 +25,7 @@ nav{
     border: solid 1px aqua;
     border-radius: 1rem;
     width: 75%;
-    height: 20rem;
+    height: 250px;
     background-color: rgb(186, 252, 230);
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@ h1{
     border: solid .5px rgba(240, 248, 255, 0.8);
     border-radius: 10px;
     box-shadow: 10px 10px 5px lightblue;
-    padding: 25px;
+    padding: 25px 30px 10px 30px;
     color: rgb(34, 34, 241);
     background-color: rgba(240, 248, 255, 0.575);
     line-height: 1.5rem;
@@ -61,4 +61,107 @@ h3{
     font-size: .8rem;
     color: red;
     font-weight: bolder;
+}
+.addButton{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: .6rem 0rem;
+}
+.addingButton{
+    border: none;
+    border-radius: 7px;
+    padding: .8rem;
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(38, 201, 106);
+}
+.addingButton:hover{
+    background-color: rgb(38, 201, 106, 0.65);
+}
+.toDoList{
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+    position: absolute;
+    top: 320px;
+    padding: 20px;
+    background-color: rgb(209, 206, 248);
+    width: 50%;
+}
+.listItem{
+    border: none;
+    border-radius: 7px;
+    padding: 20px 20px 5px ;
+    background-color: rgb(202, 242, 245);
+    line-height: 2rem;
+
+}
+.listItem button{
+    border:none;
+    border-radius: 5px;
+    padding: 7px;
+    width: 15%;
+}
+.doneButton{
+    background-color: rgb(34, 34, 241);
+    color: white;
+    font-weight: bolder;
+}
+
+.removeButton{
+    background-color: rgb(209, 69, 44);
+    color: white;
+    font-weight: bolder;
+}
+.doneButton:hover{
+    background-color: rgba(34, 34, 241,0.7);
+}
+.removeButton:hover{
+    background-color: rgba(209, 69, 44, 0.7);
+}
+.listItem:hover{
+    background-color: rgba(202, 242, 245,0.7);
+      } 
+.mainButtons{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mainButtons button{
+    border:none;
+    border-radius: 5px;
+    padding: 7px;
+    width: 15%;
+}
+.clearAll{
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+}
+
+.comfirmAll{
+    background-color: rgb(50, 201, 88);
+    color: white;
+    font-weight: bolder;
+}
+.clearAll:hover{
+    background-color: rgba(248, 148, 148, 0.7);
+}
+.comfirmAll:hover{
+    background-color: rgba(87, 163, 106, 0.7);
+}
+footer{
+    border: none;
+    background-color: black;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.5rem;
+    position: relative;
+    top: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
 }
