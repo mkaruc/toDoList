@@ -2,166 +2,87 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Handlee', cursive;
+    /* font-family: 'Patrick Hand SC', cursive; */
 }
 body{
+    background: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 720px;
+    max-height: 1200px;
 }
-.upperBackground{
-    background-color: black;
-    width: 100%;
-    height: 10rem;
+.container{
+    background-color: rgba(148, 201, 248, 0.575);
 }
-.upperBackground img{
-    width: 10rem;
-}
-nav{
-    position: absolute;
-    left: 10rem;
-    top: 4rem;
-    border: solid 1px aqua;
-    border-radius: 1rem;
-    width: 75%;
-    height: 250px;
-    background-color: rgb(186, 252, 230);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    box-shadow: 5px 5px blue, 10px 10px purple, 15px 15px green;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-h1{
-    font-size: 7rem;
-    color: navy;
-    padding: 5rem;
-}
-.addPanel{
-    border: solid .5px rgba(240, 248, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 10px 10px 5px lightblue;
-    padding: 25px 30px 10px 30px;
-    color: rgb(34, 34, 241);
-    background-color: rgba(240, 248, 255, 0.575);
-    line-height: 1.5rem;
-}
-h3{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0px 0px 2rem 0px;
-}
-#input{
-    border: .5px solid navy;
-    border-radius: 5px;
-    padding: .5rem;
-    font-size: .8rem;
-    color: red;
-    font-weight: bolder;
-}
-.addButton{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: .6rem 0rem;
-}
-.addingButton{
-    border: none;
-    border-radius: 7px;
-    padding: .8rem;
-    color: white;
-    font-weight: bolder;
-    background-color: rgb(38, 201, 106);
-}
-.addingButton:hover{
-    background-color: rgb(38, 201, 106, 0.65);
-}
-.toDoList{
-    border: none;
-    border-radius: 0px 0px 10px 10px;
-    position: absolute;
-    top: 320px;
-    padding: 20px;
-    background-color: rgb(209, 206, 248);
-    width: 50%;
-}
-.listItem{
-    border: none;
-    border-radius: 7px;
-    padding: 20px 20px 5px ;
-    background-color: rgb(202, 242, 245);
-    line-height: 2rem;
-
-}
-.listItem button{
-    border:none;
-    border-radius: 5px;
-    padding: 7px;
-    width: 15%;
-}
-.doneButton{
-    background-color: rgb(34, 34, 241);
-    color: white;
-    font-weight: bolder;
-}
-
-.removeButton{
-    background-color: rgb(209, 69, 44);
-    color: white;
-    font-weight: bolder;
-}
-.doneButton:hover{
-    background-color: rgba(34, 34, 241,0.7);
-}
-.removeButton:hover{
-    background-color: rgba(209, 69, 44, 0.7);
-}
-.listItem:hover{
-    background-color: rgba(202, 242, 245,0.7);
-      } 
-.mainButtons{
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.mainButtons button{
-    border:none;
-    border-radius: 5px;
-    padding: 7px;
-    width: 15%;
-}
-.clearAll{
-    background-color: white;
-    color: black;
-    font-weight: bolder;
-}
-
-.comfirmAll{
-    background-color: rgb(50, 201, 88);
-    color: white;
-    font-weight: bolder;
-}
-.clearAll:hover{
-    background-color: rgba(248, 148, 148, 0.7);
-}
-.comfirmAll:hover{
-    background-color: rgba(87, 163, 106, 0.7);
-}
-footer{
-    border: none;
-    background-color: black;
-    width: 100%;
-    height: 3rem;
-    font-size: 1.5rem;
+ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
     position: relative;
-    top: 120vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
+  /* Style the close button */
+  .remove {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .remove:hover {
+    background-color: #f44336;
     color: white;
+  }
+footer{
+    position: relative;
+    top: 700px;
 }

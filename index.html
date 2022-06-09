@@ -4,45 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO LIST- a codeFellas&copy; Project- MKaruc</title>
-    <link rel="icon" href="./image/codefellas-logo.png">
+    <title>To Do List by &copy;MKaruc</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="upperBackground">
-        <img src="./image/codefellas-logo.png" alt="codefellas-logo">
-    </header>
-    <main class="lowerBackground"></main>
-    <nav class="parentPanel">
-        <h1>To Do List</h1>
-        <div class="addPanel">
-            <h3>Add a List Item</h3>
-            <div class="add">
-                <form action="#">
-                    <div class="input">
-                        <input type="text" name="inputpanel" id="input" placeholder="Write something here!...">
-                    </div>
-                    <div class="addButton">
-                        <button class="addingButton">Add to List</button>
-                    </div>
-                </form>
+    <div class="container">
+        <header class="headOfThePage">
+            <h1>To Do List</h1>
+        </header>
+        <hr>
+        <main>
+            <div class="addSection">
+            <input type="text" id="listBlank" class="listblank" placeholder="Add something in here">
+            <input type="date" name="date" id="dateTime">
+            <input type="submit" id="submitButton" value="Add to List" onclick="newElement()">
             </div>
-        </div>
-    </nav>
-    <section class="toDoList">
-        <div class="listItem">
-            <p class="listText">Lorem</p>
-            <button class="doneButton">Done ✔</button>
-            <button class="removeButton">Remove ❌</button>
-        </div>
-        <div class="mainButtons">
-            <button class="comfirmAll">Confirm All</button>
-            <button class="clearAll">Clear All</button>
-        </div>
-    </section>
-    <footer>
-        <p class="footerText">To Do List by codeFellas&copy;-MKaruc</p>
-    </footer>
+            <div class="listedItems">
+                <ul id="lists">
+                    
+                </ul>
+            </div>
+            <hr>
+            <div class="rating">
+                <div class="values">
+                <h3>Rating</h3>
+                <p>Done: <span class="doneRate"></span></p>
+                <p>On going: <span class="onGoing"></span></p>
+                <p>Removed: <span class="removed"></span></p>
+                </div>
+                <hr>
+                <div class="scale">
+
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>To Do List is built by &copy;MKaruc for Clarusway Projects</footer>
     <script src="app.js"></script>
 </body>
 </html>
