@@ -16,14 +16,14 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 <body>
     <div class="container">
         <header class="headOfThePage">
-            <h1>To Do List</h1>
+            <img class="todoImage" src="./image/logoRetina.png" alt="">
         </header>
-        <hr>
         <main>
             <div class="addSection">
             <input type="text" id="listBlank" class="listblank" placeholder="Add something in here">
             <input type="date" name="date" id="dateTime">
-            <input type="submit" id="submitButton" value="Add to List" onclick="newElement()">
+            <input type="submit" id="submitButton" value="ADD" onclick="newElement()"> 
+            <input type="submit" id="resetButton" value="CLEAR" onclick="alerting()">
             </div>
             <div class="listedItems">
                 <ul id="lists">
@@ -32,21 +32,22 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
             </div>
             <hr>
             <div class="rating">
-                <div class="values">
                 <h3>Rating</h3>
+                <div class="values">
+                
                 <p>Done: <span id="doneRate"></span></p>
                 <p>Canceled: <span id="removed"></span></p>
                 </div>
                 <hr>
                 <div class="scale">
-                    <canvas id="myDoneChart" style="width:100%;max-width:700px"></canvas>
-                    <canvas id="myRemoveChart" style="width:100%;max-width:700px"></canvas>
+                   <p class="footerNote">To Do List is built by &copy;MKaruc for Clarusway Projects</p>
                 </div>
             </div>
         </main>
     </div>
-    <footer>To Do List is built by &copy;MKaruc for Clarusway Projects</footer>
+    <footer><img src="./image/codefellas-logo.png" alt="codefellasLogo" width="50%"> </footer>
     <script src="app.js"></script>
     
 </body>
+
 </html>

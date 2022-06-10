@@ -11,14 +11,19 @@ function newElement() {
     const li = document.createElement("li");
     const inputValue = document.getElementById("listBlank").value;
     const t = document.createTextNode(inputValue);
+    const dated = document.createTextNode(dateInfo.value+"  " );
+    li.appendChild(dated);
     li.appendChild(t);
-    if (inputValue === '') {
-      alert("You must write something!");
+   
+
+
+    if (inputValue === '' && dateInfo.value=== '') {
+      alert("You cannot pass without writing some To Do Item and date time!");
     } else {
       document.getElementById("lists").appendChild(li);
     }
     document.getElementById("listBlank").value = "";
-  
+    document.getElementById("dateTime").value="";
     const span = document.createElement("SPAN");
     const txt = document.createTextNode("Remove");
     span.className = "remove";
@@ -33,20 +38,7 @@ function newElement() {
         removed++;
         removeRate.innerHTML=removed;
         yRemove=removed;
-        const xValues = [ "Canceled"];
-const yValues = [ yRemove];
-const barColors = [ "red"];
-new Chart("myRemoveChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {}
-});
+        
       }
     }
   }
@@ -69,24 +61,16 @@ list.addEventListener('click', function(ev) {
     done++;
      doneRate.innerHTML=done;
      yDone=done;
-     const xValues = ["Done"];
-     const yValues = [yDone,];
-     const barColors = ["green"];
-     new Chart("myDoneChart", {
-       type: "bar",
-       data: {
-         labels: xValues,
-         datasets: [{
-           backgroundColor: barColors,
-           data: yValues
-         }]
-       },
-       options: {}
-     });
+    
   }
 }, false);
 //reting panel
 const doneRate=document.getElementById("doneRate");
 
 const removeRate=document.getElementById("removed");
-
+function alerting() {
+  var x;
+  if (confirm("Are you Sure? Because you will clear all items if you push OK button") == true) {
+    window.location.reload();
+  }
+}

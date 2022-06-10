@@ -2,8 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Handlee', cursive;
-    /* font-family: 'Patrick Hand SC', cursive; */
+    font-family: 'Patrick Hand SC', cursive;
 }
 body{
     background: black;
@@ -15,48 +14,79 @@ body{
     max-height: 1200px;
 }
 .container{
+  margin: 20px;
+  padding: 10px;
     background-color: rgba(148, 201, 248, 0.575);
+    width: 80%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+.todoImage{
+  width: 100%;
+  
+}
+main{
+  border-radius: 7px;
+  background-color: rgb(175, 194, 235);
+  padding: 1rem 0.3rem;
+}
+.addSection{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input{
+  padding: 15px;
+  gap: 44px;
+  width: 40%;
+}
+#submitButton{
+  background-color: rgb(142, 238, 142);
+  width: 20%;
+  font-weight: bolder;
+}
+#submitButton:hover{
+  background-color:rgba(142, 238, 142, 0.7) ;
 }
 ul {
     margin: 0;
     padding: 0;
+    padding: 5px;
   }
   
-  /* Style the list items */
   ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
     list-style-type: none;
-    background: #eee;
+    background: rgb(248, 224, 224);
     font-size: 18px;
     transition: 0.2s;
+    border-radius: 10px;
+    font-family: 'Patrick Hand SC', cursive;
     
-    /* make the list items unselectable */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
   }
   
-  /* Set all odd list items to a different color (zebra-stripes) */
   ul li:nth-child(odd) {
-    background: #f9f9f9;
+    background: #fda7a7;
   }
   
-  /* Darker background-color on hover */
   ul li:hover {
     background: #ddd;
   }
   
-  /* When clicked on, add a background color and strike out text */
   ul li.checked {
-    background: #888;
+    background: rgb(109, 176, 238);
     color: #fff;
     text-decoration: line-through;
   }
-  
-  /* Add a "checked" mark when clicked on */
+
   ul li.checked::before {
     content: '';
     position: absolute;
@@ -69,8 +99,7 @@ ul {
     height: 15px;
     width: 7px;
   }
-  
-  /* Style the close button */
+
   .remove {
     position: absolute;
     right: 0;
@@ -82,10 +111,26 @@ ul {
     background-color: #f44336;
     color: white;
   }
+.rating{
+  padding: 1rem 0.3rem;
+}
+.values{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 .scale{
   display: flex;
 }
+.footerNote{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 footer{
-    position: relative;
-    top: 700px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
